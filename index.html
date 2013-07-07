@@ -1,0 +1,17 @@
+---
+layout: default
+title: Dxer's Blog
+---
+
+{% for post in paginator.posts %}
+<div class="container">
+<div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+<div class="date {{ post.categories }}_css">post by {{ post.date | date:"%Y-%m-%d"}} <a href="/categories/#{{ post.categories }}">{{ post.categories }}</a></div>
+<div class="content {{ post.categories }}_content_css">
+{{ post.content }}
+</div>
+</div>
+{% endfor %}
+<div class="more">
+    <div class="title">&gt;&gt; <a href="/archive/">归档</a></div>
+</div>
